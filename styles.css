@@ -15,6 +15,7 @@
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-mono: 'Fira Code', monospace;
+  --font-pixel: 'Pixelify Sans', 'Fira Code', monospace;
   
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -208,8 +209,21 @@ body {
   color: var(--color-ink);
 }
 
+.hero-name .pixel-accent {
+  font-family: var(--font-pixel);
+  font-size: 1.15em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.95;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--color-ink);
+  display: inline-block;
+}
+
 .hero-name .serif-accent {
   font-family: var(--font-serif);
+  font-size: 0.94em;
   font-style: italic;
   font-weight: 400;
   text-transform: none;
@@ -285,7 +299,7 @@ body {
 /* Metrics Grid Bar */
 .metrics-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
@@ -318,6 +332,133 @@ body {
   color: var(--color-muted);
   margin-top: 0.4rem;
   display: block;
+}
+
+/* Hero Leadership & Publication Highlight Rows (2 Columns) */
+.hero-leadership-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.hero-leadership-card {
+  background: var(--bg-card-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  transition: var(--transition);
+}
+
+.hero-card-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.hero-leadership-card:hover {
+  border-color: rgba(214, 37, 69, 0.35);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.hero-lead-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-crimson);
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hero-lead-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.3;
+}
+
+.hero-lead-org {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  font-weight: 400;
+  margin-top: 0.25rem;
+}
+
+.org-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.org-link:hover {
+  text-decoration: underline;
+}
+
+/* Personal Now / Inspiration */
+.personal-section {
+  padding: 2rem 0 1rem;
+}
+
+.personal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.personal-card {
+  background: var(--bg-card-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.6rem;
+}
+
+.personal-card .section-tag {
+  margin-bottom: 0.65rem;
+}
+
+.personal-card-title {
+  font-size: 1.7rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.personal-card-title .serif-accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-crimson);
+}
+
+.personal-list {
+  list-style: none;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.personal-list li {
+  position: relative;
+  padding: 0.65rem 0 0.65rem 1.15rem;
+  border-top: 1px solid var(--border-light);
+  color: var(--color-muted);
+}
+
+.personal-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.05rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--color-crimson);
+}
+
+.personal-list strong {
+  color: var(--color-ink);
+  font-weight: 700;
 }
 
 /* Section Architecture (All Clean Paper White Backgrounds) */
@@ -417,6 +558,28 @@ body {
   border-radius: var(--radius-full);
 }
 
+.btn-paper-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  padding: 0.45rem 1.05rem;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.btn-paper-link:hover {
+  background: var(--color-crimson);
+  color: var(--color-paper);
+}
+
 .card-bullets {
   list-style: none;
   display: flex;
@@ -461,11 +624,30 @@ body {
   color: var(--color-ink);
 }
 
+.pub-abstract-text {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  font-style: italic;
+  line-height: 1.65;
+  margin-top: 0.45rem;
+  margin-bottom: 0.5rem;
+}
+
 .pub-journal {
   font-size: 0.825rem;
   color: var(--color-crimson);
   font-weight: 500;
   margin-top: 0.2rem;
+}
+
+.pub-inline-link {
+  color: var(--color-crimson);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.pub-inline-link:hover {
+  color: var(--color-ink);
 }
 
 /* Tag Pills */
@@ -533,11 +715,238 @@ body {
   margin-bottom: 1.5rem;
 }
 
+/* Public Service Apps Layout */
+.apps-section-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+/* Dynamic Circular Rotating Visual Stage */
+.visual-interactive-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.visual-orbit-container {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+}
+
+/* SVG Connecting Lines & Orbit Rings */
+.orbit-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: rotateTrack 28s linear infinite;
+  transform-origin: 180px 180px;
+}
+
+.visual-orbit-container:hover .orbit-svg,
+.visual-orbit-container:hover .orbit-rotating-track,
+.visual-orbit-container:hover .app-node-counter {
+  animation-play-state: paused;
+}
+
+.svg-orbit-ring {
+  fill: none;
+  stroke: rgba(8, 8, 8, 0.1);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 6;
+}
+
+.svg-orbit-ring-pulse {
+  fill: none;
+  stroke: var(--color-crimson);
+  stroke-width: 1.5;
+  opacity: 0.35;
+  stroke-dasharray: 14 180;
+}
+
+.svg-connect-line {
+  stroke: rgba(214, 37, 69, 0.28);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+}
+
+.svg-triangle-line {
+  fill: rgba(214, 37, 69, 0.02);
+  stroke: rgba(8, 8, 8, 0.08);
+  stroke-width: 1;
+}
+
+/* Center Static Badge ("Free Learning Tools") */
+.center-tools-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: var(--bg-paper);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  padding: 0.75rem;
+  transition: var(--transition);
+}
+
+.visual-orbit-container:hover .center-tools-badge {
+  border-color: rgba(214, 37, 69, 0.4);
+  box-shadow: 0 12px 36px rgba(214, 37, 69, 0.12);
+}
+
+.badge-icon-badge {
+  font-size: 1.1rem;
+  color: var(--color-crimson);
+  margin-bottom: 0.2rem;
+}
+
+.badge-text-main {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink);
+  line-height: 1.1;
+}
+
+.badge-text-sub {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--color-crimson);
+  line-height: 1.1;
+}
+
+.badge-pill-tag {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+  margin-top: 0.3rem;
+  background: var(--bg-card-light);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+/* Rotating Orbit Track */
+.orbit-rotating-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: rotateTrack 28s linear infinite;
+  transform-origin: 180px 180px;
+}
+
+/* App Orbit Nodes */
+.app-orbit-node {
+  position: absolute;
+  z-index: 5;
+}
+
+.node-top {
+  top: 50px;
+  left: 180px;
+  transform: translate(-50%, -50%);
+}
+
+.node-bottom-left {
+  top: 245px;
+  left: 67.4px;
+  transform: translate(-50%, -50%);
+}
+
+.node-bottom-right {
+  top: 245px;
+  left: 292.6px;
+  transform: translate(-50%, -50%);
+}
+
+.app-node-counter {
+  animation: counterRotateTrack 28s linear infinite;
+  transform-origin: center center;
+}
+
+.app-node-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.app-node-card:hover {
+  transform: scale(1.15);
+}
+
+.orbit-app-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border: 2px solid var(--bg-paper);
+  background: var(--bg-card-light);
+  object-fit: cover;
+}
+
+.orbit-app-name {
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  background: rgba(253, 253, 253, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  white-space: nowrap;
+}
+
+/* Orbit Rotation Keyframes */
+@keyframes rotateTrack {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counterRotateTrack {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 /* Apps Grid */
 .apps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+  gap: 1.5rem;
 }
 
 .app-box {
@@ -677,10 +1086,15 @@ body {
   .metrics-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .apps-section-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
   .awards-grid,
   .apps-grid,
   .skills-matrix,
-  .leadership-grid {
+  .leadership-grid,
+  .personal-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -689,7 +1103,8 @@ body {
   .hero-name {
     font-size: 2.1rem;
   }
-  .intro-profile-layout {
+  .intro-profile-layout,
+  .hero-leadership-row {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
