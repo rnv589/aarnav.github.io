@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   
   <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=award-cards" />
 </head>
 <body>
 
@@ -156,8 +156,8 @@
   <!-- ===================== ACADEMICS ===================== -->
   <section class="section" id="education">
     <div class="container">
-      <span class="section-tag">Academic Excellence</span>
-      <h2 class="section-title">Education & <span class="serif-accent">Academic Rigor.</span></h2>
+      <span class="section-tag">Academics</span>
+      <h2 class="section-title">Education & <span class="serif-accent">Coursework.</span></h2>
       <p class="section-desc">Coursework and professional certifications in computer science and quantitative mathematics.</p>
 
       <div class="timeline-card">
@@ -166,17 +166,18 @@
             <h3 class="card-role-title">Independence High School</h3>
             <div class="card-org-subtitle">Ashburn, Virginia</div>
           </div>
-          <span class="card-date-badge">Class of 2026</span>
+          <span class="card-date-badge">Class of 2027</span>
         </div>
 
         <ul class="card-bullets">
           <li><strong>Academic Standing:</strong> Unweighted GPA: 4.0/4.0 | SAT: 1550 (800 Math, 750 Reading).</li>
-          <li><strong>Advanced Coursework:</strong> Data Structures & AI, AP Computer Science A, AP Calculus BC, AP Statistics, Computer Math, and Data Structures DE (Dual Enrollment).</li>
+          <li><strong>Advanced Coursework:</strong> Data Structures & AI, AP Computer Science A, AP Calculus BC, Multivariable Calculus, AP Statistics, Computer Math, and Data Structures DE (Dual Enrollment).</li>
           <li><strong>Stanford & Google Certifications:</strong> Stanford University Machine Learning Specialization (Coursera), Google Technical Support Fundamentals.</li>
         </ul>
 
         <div class="tag-pills-row">
           <span class="pill-item pill-crimson">AP Calculus BC</span>
+          <span class="pill-item pill-crimson">Multivariable Calculus</span>
           <span class="pill-item pill-crimson">AP Statistics</span>
           <span class="pill-item">AP Computer Science A</span>
           <span class="pill-item">Data Structures DE</span>
@@ -189,8 +190,8 @@
   <!-- ===================== RESEARCH ===================== -->
   <section class="section" id="experience">
     <div class="container">
-      <span class="section-tag">Empirical Science</span>
-      <h2 class="section-title">Research & <span class="serif-accent">quantitative Work.</span></h2>
+      <span class="section-tag">Research</span>
+      <h2 class="section-title">Research & <span class="serif-accent">Projects.</span></h2>
       <p class="section-desc">Scientific research spanning quantitative finance computing, NASA payload engineering, and machine learning.</p>
 
       <div class="cards-timeline">
@@ -207,20 +208,9 @@
             </a>
           </div>
           <ul class="card-bullets">
-            <li><strong>Closed-Form Speed Limit &amp; Bifurcation Theory:</strong> Models central clearing margin requirements and constrained trader order flow as a closed-loop dynamical system with loop gain <strong>g = &lambda;Q/m</strong> and realized volatility amplified by <strong>1/(1 &minus; g)</strong>. Derives the exact stability threshold <strong>&theta;&gamma;g* &lt; 1 &minus; g*</strong> and proves that loss of stability occurs via a <strong>Neimark–Sacker bifurcation</strong> producing a quasi-periodic margin cycle of period 3 to 4 updating intervals.</li>
-            <li><strong>Estimator Design &amp; Mark-to-Market Capital Channel:</strong> Demonstrates that risk-model estimator shape matters more than lookback length—an equal-weight window (used in SPAN-style systems) tolerates only one-quarter of the loop gain of an exponential filter with the same mean lag—and that marking trader capital to market tightens the stability limit by an additional factor of <strong>1 &minus; g*</strong>.</li>
-            <li><strong>Quiet-Period Risk, Margin Floors &amp; Structural Estimation:</strong> Identifies that in high-gain markets, calm stretches lower perceived variance, raise leverage, and push the gain toward the no-clearing boundary (<strong>g &ge; 1</strong>), proving that a margin floor at <strong>&radic;(&lambda;W)</strong> eliminates this failure mode exactly. Develops a maximum-likelihood estimator to recover loop gain directly from return series and published margin rules.</li>
+            <li>Developed a quantitative model showing how fast margin rules can react before they amplify instability in financial markets.</li>
+            <li>Derived stability conditions and a way to identify feedback risk from market data.</li>
           </ul>
-
-          <div class="pub-box">
-            <div class="pub-title">Abstract Summary — SSRN Publication (Abstract ID: 7501698)</div>
-            <div class="pub-abstract-text">
-              “A clearing house sets margin from a risk model that reads prices, and the traders who post that margin move the prices the model reads. We close the loop and derive the speed at which a risk model may react before it destabilizes the market it measures. The loop gain is g = &lambda;Q/m, the price impact of the constrained position divided by margin per unit, and realized volatility is fundamental volatility divided by 1 &minus; g. For a risk model with reaction speed &theta; and a margin rule with elasticity &gamma; to perceived variance, the dominant eigenvalues have modulus &radic;(&theta;&gamma;g*/(1 &minus; g*)) and the market is stable if and only if &theta;&gamma;g* &lt; 1 &minus; g*. The loss of stability is always a Neimark–Sacker bifurcation, so the margin cycle it creates has a period between three and four updating intervals and never a period of two... Away from that boundary the loop damps the response of margin to fundamental volatility below what the rule alone implies, and the operative risk is instead a quiet period, in which falling measured volatility lowers margin, raises leverage, and carries the gain toward the point where no price clears. A floor at &radic;(&lambda;W) removes that possibility exactly.”
-            </div>
-            <div class="pub-journal">
-              SSRN: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7501698" target="_blank" rel="noopener noreferrer" class="pub-inline-link">papers.ssrn.com/sol3/papers.cfm?abstract_id=7501698</a> • Keywords: Margin, Procyclicality, Central Clearing, Endogenous Risk, Feedback, Bifurcation • JEL: G01, G14, G18, G23, C62
-            </div>
-          </div>
 
           <div class="tag-pills-row">
             <span class="pill-item pill-crimson">SSRN Publication</span>
@@ -238,25 +228,19 @@
               <h3 class="card-role-title">Evaluating Confidential Computing for Research Replication: A Case Study Using Intel TDX</h3>
               <div class="card-org-subtitle">George Mason University — Costello College of Business (Dept. of Finance) | Aarnav Bujamella, Nohith Challa, Prof. Jiasun Li</div>
             </div>
-            <a href="https://doi.org/10.13021/jssr2025.5235" target="_blank" rel="noopener noreferrer" class="btn-paper-link">
-              Read Publication <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
+            <div class="paper-links">
+              <a href="https://doi.org/10.13021/jssr2025.5235" target="_blank" rel="noopener noreferrer" class="btn-paper-link">
+                Read Publication <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <a href="https://arxiv.org/html/2603.24878v1" target="_blank" rel="noopener noreferrer" class="btn-paper-link">
+                Read Preprint <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
           </div>
           <ul class="card-bullets">
-            <li><strong>Confidential Computing Enclave Evaluation:</strong> Conducted research under <strong>Prof. Jiasun Li</strong> during the Aspiring Scientists Summer Internship Program (ASSIP, May–Aug 2025) evaluating <strong>Intel® Trust Domain Extensions (TDX)</strong> hardware enclaves on empirical replication packages from 2025 <em>Management Science</em> articles.</li>
-            <li><strong>Multi-Language Cloud VM Benchmarking:</strong> Launched and benchmarked secure Azure and Google Cloud TDX virtual machines across hybrid analytical toolchains spanning <strong>Stata, R, SAS, MATLAB/Octave, and Python</strong> (including proprietary WRDS data workflows), tracking VM billing logs and wall-clock execution runtimes.</li>
-            <li><strong>Empirical Reproducibility Findings:</strong> Achieved a <strong>~60% exact replication rate</strong> across complete packages at a <strong>median cost of $0.29 USD</strong> (mean $0.30 USD) and a median runtime of <strong>186 minutes</strong> (mean ~167.4 minutes), demonstrating that TDX virtual machines can securely verify multi-language financial research at negligible cost without exposing sensitive code or proprietary data.</li>
+            <li>Evaluated Intel TDX confidential-computing environments for replicating financial research across Python, R, Stata, SAS, and MATLAB.</li>
+            <li>Found ~60% exact replication at a median cost of $0.29, showing that secure research verification can be practical and affordable.</li>
           </ul>
-
-          <div class="pub-box">
-            <div class="pub-title">Abstract Summary — Journal of Student-Scientists' Research (Vol. 7, 2025)</div>
-            <div class="pub-abstract-text">
-              “Reproducibility in empirical social-science research is essential, yet replicating code and data from academic journals often demands complex, unsecured computing environments that editors cannot easily audit. Confidential computing technologies such as the Intel Trust Domain Extensions (TDX) hold promise to embed the entire workflow in a verifiable enclave, but their practical cost, performance, and compatibility have not been systematically evaluated. To test whether TDX can underpin scale replication, Azure and Google Cloud TDX virtual machines were launched and attempted to reproduce 2025 Management Science articles with a public or provided replication package... This yields a replication rate of ~60% at a median cost of $0.29 USD, a mean cost of $0.30 USD, a median runtime of 186 minutes, and a mean runtime of ~167.4 minutes... positioning confidential computing as a viable pathway for journals to enforce reproducibility without exposing sensitive code or data.”
-            </div>
-            <div class="pub-journal">
-              George Mason University • DOI: <a href="https://doi.org/10.13021/jssr2025.5235" target="_blank" rel="noopener noreferrer" class="pub-inline-link">10.13021/jssr2025.5235</a> • Published: Sept 25, 2025
-            </div>
-          </div>
 
           <div class="tag-pills-row">
             <span class="pill-item pill-crimson">TEE Publication (GMU JSSR)</span>
@@ -313,8 +297,8 @@
   <!-- ===================== AWARDS ===================== -->
   <section class="section" id="awards">
     <div class="container">
-      <span class="section-tag">Recognition</span>
-      <h2 class="section-title">Honors & <span class="serif-accent">National Awards.</span></h2>
+      <span class="section-tag">Awards</span>
+      <h2 class="section-title">Awards & <span class="serif-accent">Recognition.</span></h2>
       <p class="section-desc">Competitive programming and artificial intelligence awards.</p>
 
       <div class="awards-grid">
@@ -334,7 +318,7 @@
         </div>
 
         <!-- Congressional App Challenge -->
-        <div class="award-card">
+        <a href="https://www.congressionalappchallenge.us/24-VA10/" target="_blank" rel="noopener noreferrer" class="award-card award-card-link">
           <div>
             <h3 class="award-title">Congressional App Challenge Winner</h3>
             <p class="award-desc">
@@ -345,10 +329,10 @@
             <span class="pill-item pill-crimson">District Winner 2024</span>
             <span class="pill-item">U.S. Capitol Showcase</span>
           </div>
-        </div>
+        </a>
 
         <!-- WAICY Global Finalist -->
-        <div class="award-card">
+        <a href="https://www.waicy.org/" target="_blank" rel="noopener noreferrer" class="award-card award-card-link">
           <div>
             <h3 class="award-title">WAICY AI Competition Finalist</h3>
             <p class="award-desc">
@@ -359,7 +343,7 @@
             <span class="pill-item pill-crimson">Top 30 / 27,000 Teams</span>
             <span class="pill-item">Vision Transformers (ViT)</span>
           </div>
-        </div>
+        </a>
 
       </div>
     </div>
@@ -368,8 +352,8 @@
   <!-- ===================== APPS ===================== -->
   <section class="section" id="apps">
     <div class="container">
-      <span class="section-tag">Public Service</span>
-      <h2 class="section-title">Published Apps & <span class="serif-accent">Free Learning Tools.</span></h2>
+      <span class="section-tag">Apps</span>
+      <h2 class="section-title">Apps & <span class="serif-accent">Free Learning Tools.</span></h2>
       <p class="section-desc">100% free educational iOS applications built to help students without ads or paywalls (inspired by Sal Khan).</p>
 
       <div class="apps-section-layout">
@@ -508,8 +492,8 @@
   <!-- ===================== LEADERSHIP ===================== -->
   <section class="section" id="leadership">
     <div class="container">
-      <span class="section-tag">Community & Service</span>
-      <h2 class="section-title">Leadership & <span class="serif-accent">Extracurriculars.</span></h2>
+      <span class="section-tag">Leadership</span>
+      <h2 class="section-title">Leadership & <span class="serif-accent">Activities.</span></h2>
       <p class="section-desc">Organizing STEM events and global hackathons.</p>
 
       <div class="leadership-grid">
@@ -551,8 +535,8 @@
   <!-- ===================== SKILLS ===================== -->
   <section class="section" id="skills">
     <div class="container">
-      <span class="section-tag">Technical Competencies</span>
-      <h2 class="section-title">Languages, Tools & <span class="serif-accent">Frameworks.</span></h2>
+      <span class="section-tag">Skills</span>
+      <h2 class="section-title">Skills & <span class="serif-accent">Tools.</span></h2>
       <p class="section-desc">Core languages, financial analytics software, and machine learning toolkits.</p>
 
       <div class="skills-matrix">

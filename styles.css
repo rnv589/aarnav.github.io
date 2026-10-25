@@ -575,6 +575,14 @@ body {
   flex-shrink: 0;
 }
 
+.paper-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
 .btn-paper-link:hover {
   background: var(--color-crimson);
   color: var(--color-paper);
@@ -691,6 +699,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
   transition: var(--transition);
+}
+
+.award-card-link,
+.award-card-link:hover,
+.award-card-link:visited,
+.award-card-link:active,
+.award-card-link * {
+  color: inherit;
+  text-decoration: none !important;
 }
 
 .award-card:hover {
