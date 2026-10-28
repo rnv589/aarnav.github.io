@@ -266,16 +266,6 @@ body {
   font-weight: 600;
 }
 
-.hero-bio .goal-statement {
-  display: block;
-  margin: 0.35em 0;
-  color: var(--color-crimson);
-  font-family: var(--font-serif);
-  font-size: 1.12em;
-  font-style: italic;
-  line-height: 1.5;
-}
-
 /* Social Link Pills */
 .social-links-bar {
   display: flex;
